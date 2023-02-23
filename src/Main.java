@@ -1,5 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ваша задача - угадать число!!1");
+        int range = 10;
+        int number = (int)(Math.random() * range);
+        while(true) {
+            System.out.println("Угадайте число от 0 до " + range);
+            int input_number = scanner.nextInt();
+            if (input_number == number) {
+                System.out.println("Вы угадали!!1");
+                break;
+            } else if (input_number > number) {
+                System.out.println("Загаданное число меньше!!1");
+            } else {
+                System.out.println("Загаданное число больше!!1");
+            }
+        }
+        scanner.close();
     }
 }
