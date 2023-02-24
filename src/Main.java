@@ -3,15 +3,13 @@ import java.util.Scanner;
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-
         System.out.println("Ваша задача - угадать число!!1");
-        System.out.println("Введите верхнюю границу диапазона: ");
-        int range = scanner.nextInt();
-        int number = (int)(Math.random() * range);
-        playLevel(range, number);
+        for (int i = 10; i <= 30; i += 10) playLevel(i);
+        System.out.println("Вы выиграли!!1");
         scanner.close();
     }
-    private static void playLevel(int range, int number) {
+    private static void playLevel(int range) {
+        int number = (int)(Math.random() * range);
         while(true) {
             System.out.println("Угадайте число от 0 до " + range);
             int input_number = scanner.nextInt();
