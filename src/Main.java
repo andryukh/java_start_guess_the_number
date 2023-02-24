@@ -4,7 +4,8 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Ваша задача - угадать число!!1");
-        for (int i = 10; i <= 30; i += 10) playLevel(i);
+        int l = 0;
+        for (int i = 10; i <= 30; i += 10) { l++; System.out.println("Лэвэл " + l); playLevel(i); }
         System.out.println("Вы выиграли!!1");
         scanner.close();
     }
